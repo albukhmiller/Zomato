@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:weightSum="2"
+              tools:context=".ui.presentation.laptop.LaptopActivity">
+
+    <fragment
+            android:id="@+id/nav_host_fragment2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:name="company.alex.com.zomato.ui.presentation.laptop.Laptop1Fragment"/>
+
+    <fragment
+            android:id="@+id/nav_host_fragment3"
+            android:layout_width="match_parent"
+            android:name="company.alex.com.zomato.ui.presentation.laptop.Laptop2Fragment"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+</LinearLayout>
