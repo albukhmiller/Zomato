@@ -5,8 +5,9 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import company.alex.com.zomato.R
-import company.alex.com.zomato.datasources.models.restaurant.Category
+import company.alex.com.zomato.models.restaurant.CategoryDto
 import company.alex.com.zomato.databinding.ItemRestaurantTypeBinding
+import company.alex.com.zomato.models.restaurant.Category
 import company.alex.com.zomato.ui.presentation.common.adapters.BaseRecyclerViewAdapter
 
 class RestaurantTypeAdapter(private val onClickListener: (Category) -> Unit) :
@@ -36,7 +37,7 @@ class RestaurantTypeAdapter(private val onClickListener: (Category) -> Unit) :
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: Category, listener: (Category) -> Unit) {
-            binding.data = item.categories
+            binding.data = item
             itemView.setOnClickListener { listener(item) }
         }
     }

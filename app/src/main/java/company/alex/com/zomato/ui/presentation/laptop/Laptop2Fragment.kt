@@ -1,16 +1,12 @@
 package company.alex.com.zomato.ui.presentation.laptop
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.Observer
-import androidx.lifecycle.observe
 import company.alex.com.zomato.BR
 import company.alex.com.zomato.R
 import company.alex.com.zomato.databinding.FragmentLaptop2Binding
-import company.alex.com.zomato.datasources.models.searchCity.CityInfo
 import company.alex.com.zomato.di.components.DaggerAppComponents
 import company.alex.com.zomato.ui.presentation.common.BaseFragment
 

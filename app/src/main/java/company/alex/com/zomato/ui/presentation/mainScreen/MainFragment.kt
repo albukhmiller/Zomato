@@ -29,7 +29,7 @@ class MainFragment : BaseFragment<MainViewModel, FragmentMainBinding>() {
         super.onViewCreated(view, savedInstanceState)
 
         var adapter = RestaurantTypeAdapter {
-            Toast.makeText(activity, it.categories.toString(), Toast.LENGTH_LONG).show()
+            Toast.makeText(activity, it.toString(), Toast.LENGTH_LONG).show()
         }
         Utils.setupRecyclerView(rvRestaurantType, adapter)
     }

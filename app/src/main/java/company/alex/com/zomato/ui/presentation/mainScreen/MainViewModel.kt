@@ -5,8 +5,8 @@ import androidx.databinding.ObservableField
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.OnLifecycleEvent
 import company.alex.com.zomato.R
-import company.alex.com.zomato.datasources.models.restaurant.Category
 import company.alex.com.zomato.domain.inretactors.RestaurantInteractor
+import company.alex.com.zomato.models.restaurant.Category
 import company.alex.com.zomato.ui.presentation.common.BaseViewModel
 import javax.inject.Inject
 
@@ -18,7 +18,7 @@ class MainViewModel @Inject constructor(private val restaurantInteractor: Restau
     fun onCreate() {
         restaurantInteractor.getCategories()
             .subscribe({
-                restaurantCategory.set(it.categories)
+                restaurantCategory.set(it)
             }, { error -> Log.d("TAG", error.message) })
     }
 
@@ -27,7 +27,7 @@ class MainViewModel @Inject constructor(private val restaurantInteractor: Restau
     }
 
 
-    fun  openLaptopActivity() {
+    fun openLaptopActivity() {
         navigateTo(R.id.laptopActivity)
     }
 

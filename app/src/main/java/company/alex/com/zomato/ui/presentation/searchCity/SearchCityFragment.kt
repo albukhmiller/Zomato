@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import company.alex.com.zomato.BR
 import company.alex.com.zomato.R
 import company.alex.com.zomato.databinding.FragmentSearchCityBinding
-import company.alex.com.zomato.datasources.models.restaurant.Category
+import company.alex.com.zomato.models.restaurant.CategoryDto
 import company.alex.com.zomato.di.components.DaggerAppComponents
 import company.alex.com.zomato.ui.presentation.common.BaseFragment
 
@@ -25,6 +25,6 @@ class SearchCityFragment : BaseFragment<SearchCityViewModel, FragmentSearchCityB
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.restaurantCaregory = (arguments!!["nav"] as Category).categories.name
+        viewModel.restaurantCaregory = (arguments!!["nav"] as CategoryDto).categories.name
     }
 }

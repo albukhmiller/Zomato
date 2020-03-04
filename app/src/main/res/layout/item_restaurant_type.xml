@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
     <data>
-        <variable name="data" type="company.alex.com.zomato.datasources.models.restaurant.Categories"/>
+        <variable name="data" type="company.alex.com.zomato.models.restaurant.Category"/>
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
